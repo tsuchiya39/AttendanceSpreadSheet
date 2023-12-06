@@ -1,4 +1,4 @@
-function myFunction() {
+function fixValue() {
   // 利用者数
   const userNum = 3;
   //  スプレッドシートの読み込み
@@ -20,7 +20,7 @@ function myFunction() {
 
   // 指定の時刻になったら値を固定する
   if (currentTime.getHours() === targetTime.getHours() &&
-      currentTime.getMinutes() >= targetTime.getMinutes() && currentTime.getMinutes < targetTime.getMinutes() + 30 &&
+      currentTime.getMinutes() >= targetTime.getMinutes() && currentTime.getMinutes() < targetTime.getMinutes() + 30.0 &&
       currentTime.getSeconds() >= targetTime.getSeconds() && 
       isHoliday_(currentTime) === false) {
 
