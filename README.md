@@ -6,5 +6,5 @@
 - 休日と祝日には作動しないようにした．
 - Google App scriptの仕様上GUIからトリガー生成は1時間の間でランダムに作動するためTrigger.gsで指定した時間調度に作動するように変更
 
- <img src="./image/参照ファイル.jpg" width="300px">
- ![出力シート](https://github.com/tsuchiya39/AttendanceSpreadSheet/assets/82928589/b99e0fbb-65af-48b0-96ec-fa8da3f81d22)
+ <img src="./image/参照シート.jpg" width="300px">
+ <img src="./image/出力シート.jpg" width="300px">
