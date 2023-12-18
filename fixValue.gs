@@ -3,7 +3,7 @@ function fixValue() {
   //  スプレッドシートの読み込み 
   const spreadsheet = SpreadsheetApp.getActiveSpreadsheet()
   const ruleSheet = spreadsheet.getSheetByName('Rule'); // 基本のルールシート
-  const inputSheet = spreadsheet.getSheetByName('test');// 入力シート
+  const inputSheet = spreadsheet.getSheetByName('database');// 入力シート
   const outputSheet = spreadsheet.getSheetByName(ruleSheet.getRange("E2").getValue());// 出力シート(月によって変化)
 
   const userNum = ruleSheet.getRange("D2").getValue(); // 利用者数
