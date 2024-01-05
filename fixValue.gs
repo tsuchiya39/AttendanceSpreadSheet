@@ -27,9 +27,13 @@ function fixValue() {
       isHoliday_(currentTime) === false) {
 
     // ユーザー数ループ
-    for (targetRow = 2;targetRow <= userNum+1;targetRow++){
-      fixedValue = inputSheet.getRange(targetRow,targetCol).getValue(); // 固定したい値を設定
-      outputSheet.getRange(targetRow,today + 2).setValue(fixedValue); //設定する値
+    for (targetRow = 2;targetRow <= userNum+1;targetRow++){ // activeButtonがOff(長期休みなど)の時は動作しない
+      var activeCheckButton = ruleSheet.getRange(targetRow,7); // 7はチェックボックスの列数
+
+      if (activeCheckButton == true){
+        fixedValue = inputSheet.getRange(targetRow,targetCol).getValue(); // 固定したい値を設定
+        outputSheet.getRange(targetRow,today + 2).setValue(fixedValue); //設定する値
+      }
     }
   }
 }
